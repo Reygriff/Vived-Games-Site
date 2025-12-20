@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vived Games | Games</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: url("aboutus.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* OVERLAY */
+.overlay {
+    min-height: 100vh;
+    background: rgba(0,0,0,0.7);
+    padding: 40px 20px;
+}
+
+/* TITLE */
+.page-title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 50px;
+}
+
+/* GAMES GRID */
+.games-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+/* GAME CARD */
+.game-card {
+    background: rgba(0,0,0,0.6);
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+/* GAME TITLE */
+.game-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* STATUS TEXT */
+.game-status {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* DOWNLOAD BUTTON */
+.download-btn {
+    padding: 12px 22px;
+    font-size: 16px;
+    background: #1aff4c;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.download-btn.disabled {
+    background: #555;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    color: #aaa;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="page-title">Vived Games | Games</div>
+
+    <div class="games-grid">
+
+        <!-- GAME 1 -->
+        <div class="game-card">
+            <div class="game-title">Vasuko</div>
+            <div class="game-status">Coming Soon</div>
+            <button class="download-btn disabled">Download</button>
+        </div>
+
+        <!-- GAME 2 -->
+        <div class="game-card">
+            <div class="game-title">Catch If You Can</div>
+            <div class="game-status">Coming Soon</div>
+            <button class="download-btn disabled">Download</button>
+        </div>
+
+        <!-- GAME 3 -->
+        <div class="game-card">
+            <div class="game-title">Coming Soon</div>
+            <div class="game-status">Coming Soon</div>
+            <button class="download-btn disabled">Coming Soon</button>
+        </div>
+
+        <!-- GAME 4 -->
+        <div class="game-card">
+            <div class="game-title">Coming Soon</div>
+            <div class="game-status">Coming Soon</div>
+            <button class="download-btn disabled">Coming Soon</button>
+        </div>
+
+        <!-- GAME 5 -->
+        <div class="game-card">
+            <div class="game-title">Coming Soon</div>
+            <div class="game-status">Coming Soon</div>
+            <button class="download-btn disabled">Coming Soon</button>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2025 Vived Games. All rights reserved.
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vived Games (Intro)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" src="SLAVA FUNK!.mp3" loop></audio>
+
+<button class="admin-btn" onclick="openAdmin()">ADMIN</button>
+
+<div class="admin-panel" id="adminPanel">
+    <h2>ADMIN PANEL</h2>
+    <div class="admin-info" id="adminInfo"></div>
+
+    <div class="admin-actions">
+        <button class="pass-btn" onclick="changePassword()">Change Password</button>
+        <button class="logout-btn" onclick="logoutAdmin()">Logout</button>
+    </div>
+
+    <input id="sceneSearch" placeholder="Search scene text..."
+      oninput="searchScenes()"
+      style="width:60%;padding:10px;border-radius:6px;border:none;">
+
+    <div class="admin-grid" id="sceneGrid"></div>
+</div>
+
+<!-- TITLES -->
+<div id="title1" class="title show">Vived Games</div>
+<div id="title2" class="title">Song By MVSTERIOUS</div>
+<div id="title3" class="title">Site Made By VVX, Reygriff</div>
+<div id="title4" class="title">
+    Vived Games<span class="reg">®</span> | Games are the player's flames
+</div>
+
+<!-- AURA SCENE (FIXED) -->
+<div id="auraScene" style="
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    width:100%;
+">
+   <div id="title5" class="title">Games Filled With AURA Are Coming Soon</div>
+
+<button id="launchBtn" class="launch-btn">
+Launch Website
+</button>
+
+
+
+<!-- CLOSING -->
+<div id="title6" class="title">Window Closing By Its Own</div>
+<div id="countdown" class="title"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

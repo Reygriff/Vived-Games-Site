@@ -1,0 +1,143 @@
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: url("vIVED BACKGROND.png") repeat-x;
+    background-size: cover;
+    animation: moveClouds 60s linear infinite;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+@keyframes moveClouds {
+    from { background-position: 0 0; }
+    to { background-position: -2000px 0; }
+}
+
+.title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    opacity: 0;
+    transition: opacity 2s ease;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.show { opacity: 1; }
+
+.reg {
+    font-size: 0.4em;
+    vertical-align: super;
+}
+.launch-btn {
+    position: absolute;
+    top: 60px;
+    left: 560px;
+    padding: 14px 30px;
+    font-size: 22px;
+    background: #1aff4c;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    box-shadow: 0 0 15px rgba(26,255,76,0.7);
+}
+
+
+
+.admin-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 8px 16px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.admin-panel {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    display: none;
+    z-index: 200;
+    overflow-y: auto;
+}
+
+.admin-panel h2 { margin-top: 20px; }
+
+.admin-info {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.admin-actions button {
+    margin: 8px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.logout-btn { background: #ff4444; color: white; }
+.pass-btn { background: #1aff4c; color: black; }
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.scene-card {
+    border: 2px solid #1aff4c;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.scene-card:hover { transform: scale(1.05); }
+
+.scene-img {
+    height: 120px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#countdown {
+    top: calc(40% + 70px);
+    font-size: 40px;
+}
+.aura {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.aura .launch-btn {
+    position: relative;
+    margin-top: 25px;
+}
+/* Override ONLY for AURA title */
+#auraFix {
+    transform: translateX(-50%);
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vived Games | About Us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: url("aboutus.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* OVERLAY */
+.overlay {
+    min-height: 100vh;
+    background: rgba(0,0,0,0.7);
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #ddd;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* SECTION */
+.section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(0,0,0,0.6);
+    border-left: 5px solid #1aff4c;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 26px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* TEAM */
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.member {
+    background: rgba(0,0,0,0.6);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.member h3 {
+    margin: 10px 0 5px;
+}
+
+.member span {
+    color: #1aff4c;
+    font-size: 14px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 25px;
+    color: #aaa;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="header">
+        <h1>About Vived Games</h1>
+        <p>
+            Vived Games is a creative game studio focused on building fun,
+            unique and high-quality gaming experiences for players around the world.
+        </p>
+    </div>
+
+    <div class="section">
+
+        <div class="card">
+            <h2>Who We Are</h2>
+            <p>
+                Vived Games is a growing game development brand driven by passion,
+                creativity and innovation. We aim to create games that are exciting,
+                fair and enjoyable for everyone.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to develop games filled with creativity, challenge
+                and fun while building a strong community around our studio.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Our Team</h2>
+
+            <div class="team">
+                <div class="member">
+                    <h3>Reygriff (Reyansh Verma)</h3>
+                    <span>Founder & Developer</span>
+                </div>
+
+                <div class="member">
+                    <h3>VVX (Vedanshi Verma)</h3>
+                    <span>Co-Founder & Developer</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2025 Vived Games. All rights reserved.
+    </div>
+
+</div>
+
+</body>
+</html>
