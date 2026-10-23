@@ -1,0 +1,173 @@
+@import url("variables.css");
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #4a90c2;
+    background-image: url("../assets/images/vived-background.png");
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation: moveClouds 60s linear infinite;
+    font-family: var(--font-main);
+    color: var(--color-text);
+    text-align: center;
+}
+
+@keyframes moveClouds {
+    from { background-position: 0 0; }
+    to { background-position: -2000px 0; }
+}
+
+.title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(28px, 5vw, 48px);
+    opacity: 0;
+    transition: opacity 2s ease;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 900px;
+}
+
+.show {
+    opacity: 1;
+}
+
+.reg {
+    font-size: 0.4em;
+    vertical-align: super;
+}
+
+.aura-scene {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+}
+
+.aura-scene .title {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+}
+
+.launch-btn {
+    position: relative;
+    margin-top: 25px;
+    padding: 14px 30px;
+    font-size: 22px;
+    background: var(--color-brand);
+    color: black;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    box-shadow: 0 0 15px var(--color-brand-glow);
+}
+
+.launch-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.admin-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 8px 16px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.admin-panel {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
+    z-index: 200;
+    overflow-y: auto;
+}
+
+.admin-panel h2 {
+    margin-top: 20px;
+}
+
+.admin-info {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.admin-actions button {
+    margin: 8px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.logout-btn {
+    background: #ff4444;
+    color: white;
+}
+
+.pass-btn {
+    background: var(--color-brand);
+    color: black;
+}
+
+.admin-search {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: var(--radius-sm);
+    border: none;
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.scene-card {
+    border: 2px solid var(--color-brand);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.scene-card:hover {
+    transform: scale(1.05);
+}
+
+.scene-img {
+    height: 120px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#countdown {
+    top: calc(40% + 70px);
+    font-size: 40px;
+}

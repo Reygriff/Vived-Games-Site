@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Vived Games | Account</title>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="page-auth page-account">
+
+<a href="web.html" class="auth-back">← Back to Home</a>
+
+<div class="auth-overlay">
+    <div class="auth-card account-settings">
+        <h1>Account</h1>
+        <p class="auth-subtitle">Manage your Vived Games profile</p>
+
+        <div class="account-pfp-section">
+            <div id="accountPfpWrap" class="account-pfp-wrap pfp-with-rank">
+                <div id="accountPfpPreview" class="account-pfp-preview" aria-hidden="true">V</div>
+            </div>
+            <label for="accountPfpInput" class="account-pfp-change">Change photo</label>
+            <input id="accountPfpInput" type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden>
+            <button id="removePfpBtn" class="account-pfp-remove" type="button" hidden>Remove photo</button>
+        </div>
+
+        <div class="auth-field">
+            <label for="accountDisplayInput">Display Name</label>
+            <input id="accountDisplayInput" type="text" autocomplete="nickname" maxlength="40" required>
+        </div>
+
+        <div class="account-readonly">
+            <div id="accountUsername" class="account-username">#Player</div>
+            <div id="accountEmail" class="account-email">player@email.com</div>
+        </div>
+
+        <button id="saveAccountBtn" class="auth-submit" type="button">Save Changes</button>
+
+        <div class="account-collapse">
+            <button type="button" class="account-collapse-toggle" aria-expanded="false" aria-controls="emailChangePanel">
+                <span class="account-collapse-label">Change Email</span>
+                <span class="account-collapse-chevron" aria-hidden="true"></span>
+            </button>
+            <div id="emailChangePanel" class="account-collapse-panel" hidden>
+                <div class="auth-field">
+                    <label for="accountNewEmailInput">New email address</label>
+                    <input id="accountNewEmailInput" type="email" autocomplete="email" placeholder="you@example.com">
+                </div>
+                <button id="sendEmailChangeBtn" class="auth-secondary-btn" type="button">Send verification code</button>
+
+                <div id="emailChangeVerify" hidden>
+                    <p class="account-verify-note">Code sent to <strong id="emailChangeTarget">your new email</strong></p>
+                    <div class="auth-field">
+                        <label for="emailChangeCode">6-Digit Code</label>
+                        <input id="emailChangeCode" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="000000" autocomplete="one-time-code">
+                    </div>
+                    <button id="confirmEmailChangeBtn" class="auth-submit" type="button">Confirm new email</button>
+                    <button id="resendEmailChangeBtn" class="auth-link-btn" type="button">Resend code</button>
+                    <button id="cancelEmailChangeBtn" class="auth-link-btn" type="button">Cancel</button>
+                    <p id="emailChangeFallback" class="code-fallback" hidden></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="account-collapse">
+            <button type="button" class="account-collapse-toggle" aria-expanded="false" aria-controls="passwordChangePanel">
+                <span class="account-collapse-label">Change Password</span>
+                <span class="account-collapse-chevron" aria-hidden="true"></span>
+            </button>
+            <div id="passwordChangePanel" class="account-collapse-panel" hidden>
+                <div class="auth-field">
+                    <label for="accountNewPassword">New password</label>
+                    <div class="password-input">
+                        <input id="accountNewPassword" type="password" autocomplete="new-password" minlength="8">
+                        <button class="password-toggle" type="button" aria-label="Show password">Show</button>
+                    </div>
+                </div>
+                <div class="auth-field">
+                    <label for="accountConfirmPassword">Confirm new password</label>
+                    <div class="password-input">
+                        <input id="accountConfirmPassword" type="password" autocomplete="new-password" minlength="8">
+                        <button class="password-toggle" type="button" aria-label="Show password">Show</button>
+                    </div>
+                </div>
+                <button id="sendPasswordChangeBtn" class="auth-secondary-btn" type="button">Send verification code</button>
+
+                <div id="passwordChangeVerify" hidden>
+                    <p class="account-verify-note">Code sent to <strong id="passwordChangeTarget">your email</strong></p>
+                    <div class="auth-field">
+                        <label for="passwordChangeCode">6-Digit Code</label>
+                        <input id="passwordChangeCode" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="000000" autocomplete="one-time-code">
+                    </div>
+                    <button id="confirmPasswordChangeBtn" class="auth-submit" type="button">Confirm new password</button>
+                    <button id="resendPasswordChangeBtn" class="auth-link-btn" type="button">Resend code</button>
+                    <button id="cancelPasswordChangeBtn" class="auth-link-btn" type="button">Cancel</button>
+                    <p id="passwordChangeFallback" class="code-fallback" hidden></p>
+                </div>
+            </div>
+        </div>
+
+        <button id="signOutBtn" class="auth-submit auth-signout" type="button">Sign Out</button>
+
+        <div id="accountMessage" class="auth-message"></div>
+    </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/session-guard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/download-gate.js"></script>
+<script src="js/ranks.js"></script>
+<script src="js/auth.js?v=5"></script>
+</body>
+</html>

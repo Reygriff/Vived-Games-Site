@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Vived Games</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet " href="web.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Vived Games</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="page-home">
 
-<!-- TOP RIGHT MENU -->
-<div class="top-menu">
-    <span onclick="location.href='web.html'">Home</span>
-    <span onclick="location.href='gameslist.html'">Games</span>
-    <span onclick="location.href='devs.html'">About Us</span>
-    <span onclick="location.href='contact.html'">Contact Us</span>
-</div>
-
-<div class="hamburger-menu">
-    <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+<nav class="top-menu" aria-label="Main navigation">
+    <a href="web.html">Home</a>
+    <a href="gameslist.html">Games</a>
+    <a href="products.html">Products</a>
+    <a href="devs.html">About Us</a>
+    <div class="top-menu-contact">
+        <a href="contact.html">Contact Us</a>
+        <div class="nav-auth-slot nav-auth-slot--top" data-nav-auth></div>
     </div>
+</nav>
+
 <div class="hamburger-menu">
-    <div class="hamburger">
+    <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
         <span></span>
         <span></span>
         <span></span>
@@ -33,20 +29,22 @@
     <div class="menu-box">
         <a href="web.html">Home</a>
         <a href="gameslist.html">Games</a>
+        <a href="products.html">Products</a>
         <a href="devs.html">About Us</a>
         <a href="contact.html">Contact Us</a>
-
         <hr>
-
-        <a href="#">Sign In</a>
-        <a href="#">Be An ADMIN</a>
-        <a href="https://discord.gg/Hg4gnBPC" target="_blank">Join Discord</a>     
-        <a href="tags.html">Get A Tag</a>
-        <a href="#">Download Studio</a>
-        <a href="#">Map Developing</a>
+        <div class="nav-auth-slot nav-auth-slot--menu" data-nav-auth-mobile></div>
+        <a href="news.html">News</a>
+        <a href="profiles.html">Profiles</a>
     </div>
 </div>
-<script src="web.js"></script>
 
+<script src="js/config.js"></script>
+<script src="js/session-guard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/download-gate.js"></script>
+<script src="js/ranks.js"></script>
+<script src="js/auth.js?v=10"></script>
 </body>
 </html>

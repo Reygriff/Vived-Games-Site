@@ -1,128 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Vived Games | Tags Info</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body {
-    margin: 0;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #0b0b0b, #1a1a1a);
-    font-family: Arial, sans-serif;
-    color: white;
-}
-
-/* HEADER */
-.header {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.header h1 {
-    font-size: 38px;
-    margin: 0;
-}
-
-.header p {
-    color: #aaa;
-}
-
-/* TAG INFO BOX */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.tag-box {
-    background: rgba(0,0,0,0.6);
-    border-left: 5px solid #1aff4c;
-    border-radius: 8px;
-    padding: 25px;
-    margin-bottom: 25px;
-}
-
-.tag-title {
-    font-size: 24px;
-    margin-bottom: 6px;
-}
-
-.tag-price {
-    font-size: 18px;
-    color: #1aff4c;
-    margin-bottom: 12px;
-}
-
-.tag-desc {
-    font-size: 16px;
-    color: #ddd;
-    line-height: 1.6;
-}
-
-/* FOOTER */
-.footer {
-    text-align: center;
-    padding: 20px;
-    color: #666;
-    font-size: 14px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Vived Games | Tags Info</title>
+    <link rel="stylesheet" href="css/pages.css">
 </head>
+<body class="page-tags-learn">
 
-<body>
+<nav class="top-menu" aria-label="Main navigation">
+    <a href="web.html">Home</a>
+    <a href="gameslist.html">Games</a>
+    <a href="products.html">Products</a>
+    <a href="devs.html">About Us</a>
+    <div class="top-menu-contact">
+        <a href="contact.html">Contact Us</a>
+        <div class="nav-auth-slot nav-auth-slot--top" data-nav-auth></div>
+    </div>
+</nav>
 
-<div class="header">
-    <h1>Vived Games | Tag Details</h1>
-    <p>Learn what each tag gives you</p>
+<div class="hamburger-menu">
+    <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="menu-box">
+        <a href="web.html">Home</a>
+        <a href="gameslist.html">Games</a>
+        <a href="products.html">Products</a>
+        <a href="devs.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <hr>
+        <div class="nav-auth-slot nav-auth-slot--menu" data-nav-auth-mobile></div>
+        <a href="news.html">News</a>
+        <a href="profiles.html">Profiles</a>
+    </div>
 </div>
 
-<div class="container">
+<div class="overlay">
+    <div class="header">
+        <h1>Vived Games | Tag Details</h1>
+        <p>Learn what each tag gives you</p>
+    </div>
 
-    <div class="tag-box">
-        <div class="tag-title">Verified</div>
-        <div class="tag-price">$10</div>
-        <div class="tag-desc">
-            1000 vbucks<br>
-            No banning<br>
-            Judges in future challenges<br>
-            First to get new games
+    <div class="container">
+        <div class="tag-box">
+            <div class="tag-title">Verified</div>
+            <div class="tag-price">$10</div>
+            <div class="tag-desc">
+                1000 vbucks<br>
+                No banning<br>
+                Judges in future challenges<br>
+                First to get new games
+            </div>
+        </div>
+
+        <div class="tag-box">
+            <div class="tag-title">Player</div>
+            <div class="tag-price">$5</div>
+            <div class="tag-desc">100 vbucks</div>
+        </div>
+
+        <div class="tag-box">
+            <div class="tag-title">Verified Studio Game Developer</div>
+            <div class="tag-price">Make Games For Vived Games</div>
+            <div class="tag-desc">
+                10000 vbucks<br>
+                No banning<br>
+                Judges in their games<br>
+                First to get new games
+            </div>
+        </div>
+
+        <div class="tag-box">
+            <div class="tag-title">Admin</div>
+            <div class="tag-price">Be An Admin</div>
+            <div class="tag-desc">Full control of games</div>
         </div>
     </div>
 
-    <div class="tag-box">
-        <div class="tag-title">Player</div>
-        <div class="tag-price">$5</div>
-        <div class="tag-desc">
-            100 vbucks
-        </div>
-    </div>
-
-    <div class="tag-box">
-        <div class="tag-title">Verified Studio Game Developer</div>
-        <div class="tag-price">Make Games For Vived Games</div>
-        <div class="tag-desc">
-            10000 vbucks<br>
-            No banning<br>
-            Judges in their games<br>
-            First to get new games
-        </div>
-    </div>
-
-    <div class="tag-box">
-        <div class="tag-title">Admin</div>
-        <div class="tag-price">Be An Admin</div>
-        <div class="tag-desc">
-            Full control of games
-        </div>
-    </div>
-
+    <div class="footer">&copy; 2026 Vived Games. All rights reserved.</div>
 </div>
 
-<div class="footer">
-    © 2025 Vived Games
-</div>
-
+<script src="js/config.js"></script>
+<script src="js/session-guard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/download-gate.js"></script>
+<script src="js/ranks.js"></script>
+<script src="js/auth.js?v=10"></script>
 </body>
 </html>

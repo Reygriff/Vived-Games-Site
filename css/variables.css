@@ -1,0 +1,16 @@
+:root {
+    --color-brand: #1aff4c;
+    --color-brand-glow: rgba(26, 255, 76, 0.7);
+    --color-text: #ffffff;
+    --color-text-muted: #dddddd;
+    --color-text-dim: #aaaaaa;
+    --color-text-faint: #666666;
+    --color-bg-dark: #0b0b0b;
+    --color-bg-mid: #1a1a1a;
+    --color-overlay: rgba(0, 0, 0, 0.7);
+    --color-card: rgba(0, 0, 0, 0.6);
+    --font-main: Arial, sans-serif;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+}

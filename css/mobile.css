@@ -1,0 +1,264 @@
+@import url("variables.css");
+
+/* Mobile & touch-friendly layout */
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@media (max-width: 640px) {
+    .hamburger-menu {
+        top: max(12px, env(safe-area-inset-top));
+        left: max(12px, env(safe-area-inset-left));
+    }
+
+    .hamburger {
+        width: 44px;
+        min-height: 44px;
+        padding: 8px 6px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: var(--radius-sm);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    .hamburger span {
+        background: #111;
+        margin: 4px 0;
+    }
+
+    .menu-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        min-width: 0;
+        border-radius: 0;
+        padding: max(72px, calc(env(safe-area-inset-top) + 56px)) 20px max(24px, env(safe-area-inset-bottom));
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        z-index: 199;
+    }
+
+    .menu-box a {
+        font-size: 18px;
+        margin: 14px 0;
+        padding: 4px 0;
+    }
+
+    .menu-box hr {
+        margin: 16px 0;
+    }
+
+    .nav-auth-slot--menu {
+        display: block;
+        margin: 8px 0 12px;
+    }
+
+    .nav-auth-slot--menu .nav-signin-link {
+        display: block;
+        color: #111;
+        font-size: 18px;
+        margin: 14px 0;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .nav-auth-slot--menu .nav-profile {
+        justify-content: flex-start;
+        padding: 8px 0;
+    }
+
+    .nav-auth-slot--menu .nav-profile-dropdown {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border: 1px solid #ddd;
+        margin-top: 8px;
+        min-width: 0;
+    }
+
+    .overlay {
+        padding: max(72px, calc(env(safe-area-inset-top) + 56px)) 16px 32px;
+    }
+
+    .header {
+        padding: 72px 16px 36px;
+    }
+
+    .section,
+    .container {
+        padding: 16px;
+    }
+
+    .card,
+    .tag-box,
+    .tag-item {
+        padding: 18px;
+    }
+
+    .card h2,
+    .tag-box .tag-title {
+        font-size: 22px;
+    }
+
+    .games-grid,
+    .profiles-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .profiles-search {
+        flex-direction: column;
+    }
+
+    .profiles-search button {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .profiles-search input {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .public-profile-card {
+        padding: 28px 20px;
+    }
+
+    .public-profile-name {
+        font-size: 24px;
+    }
+
+    .news-article {
+        padding: 20px 18px;
+    }
+
+    .news-subheader {
+        font-size: 16px;
+    }
+
+    .team {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: 20px 16px max(20px, env(safe-area-inset-bottom));
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 641px) {
+    .nav-auth-slot--menu {
+        display: none !important;
+    }
+}
+
+@media (hover: none) {
+    .hamburger-menu:hover .menu-box {
+        display: none;
+    }
+
+    .hamburger-menu.open .menu-box {
+        display: block;
+    }
+}
+
+@media (max-width: 640px) {
+    body.page-about,
+    body.page-games,
+    body.page-products,
+    body.page-tags {
+        background-attachment: scroll;
+    }
+
+    body.page-auth .auth-back {
+        top: max(14px, env(safe-area-inset-top));
+        left: auto;
+        right: max(14px, env(safe-area-inset-right));
+        font-size: 14px;
+        max-width: 42vw;
+        text-align: right;
+        line-height: 1.3;
+    }
+
+    body.page-auth .auth-overlay {
+        padding: max(56px, env(safe-area-inset-top)) 16px 32px;
+    }
+
+    body.page-auth .auth-card {
+        padding: 24px 18px;
+    }
+
+    body.page-auth .auth-card h1 {
+        font-size: 24px;
+    }
+
+    body.page-auth .auth-field input,
+    body.page-auth .username-input input,
+    body.page-auth .password-input input {
+        font-size: 16px;
+    }
+
+    body.page-auth .auth-oauth-btn {
+        font-size: 14px;
+        padding: 14px 12px;
+    }
+
+    body.page-auth .auth-oauth-label {
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    #verify-code,
+    #emailChangeCode,
+    #passwordChangeCode {
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 640px) {
+    body.page-intro,
+    body:not([class]) {
+        min-height: 100dvh;
+    }
+
+    .launch-btn {
+        font-size: 18px;
+        padding: 14px 24px;
+        width: min(100%, 280px);
+    }
+
+    #countdown {
+        font-size: 28px;
+        top: calc(40% + 90px);
+    }
+
+    .admin-btn {
+        top: max(10px, env(safe-area-inset-top));
+        right: max(10px, env(safe-area-inset-right));
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .admin-search {
+        width: calc(100% - 32px);
+        max-width: none;
+        box-sizing: border-box;
+    }
+
+    .admin-grid {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+}

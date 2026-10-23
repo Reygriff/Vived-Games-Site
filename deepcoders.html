@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Deepcoders - AI Coding Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0b0b0b;
+            color: #e8e8e8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container { max-width: 780px; margin: 0 auto; padding: 40px 24px; flex: 1; }
+        header { text-align: center; padding: 60px 0 40px; }
+        .logo { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 16px; }
+        .logo svg { width: 36px; height: 36px; }
+        header h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.03em; }
+        header p { color: #8a8a8a; font-size: 16px; margin-top: 8px; }
+        .badge { display: inline-block; background: #3b82f6; color: #fff; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 20px; margin-top: 12px; }
+        .download-card {
+            background: #141414;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .download-card h2 { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+        .download-card p { color: #8a8a8a; font-size: 14px; margin-bottom: 24px; }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #22c55e;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 14px 36px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .download-btn:hover { background: #16a34a; }
+        .download-btn svg { width: 20px; height: 20px; }
+        .meta { margin-top: 16px; font-size: 12px; color: #5c5c5c; }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .feature {
+            background: #141414;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .feature h3 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+        .feature p { font-size: 12px; color: #8a8a8a; line-height: 1.5; }
+        .footer { text-align: center; padding: 20px 0; font-size: 12px; color: #5c5c5c; }
+        @media (max-width: 640px) {
+            .container { padding: 24px 16px; }
+            header { padding: 40px 0 28px; }
+            header h1 { font-size: 26px; }
+            .download-card { padding: 28px 20px; }
+            .download-btn { width: 100%; justify-content: center; box-sizing: border-box; }
+            .features { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body class="deepcoders-page">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                </svg>
+                <h1>Deepcoders</h1>
+            </div>
+            <p>AI-powered coding assistant for your desktop</p>
+            <span class="badge">v1.0.6</span>
+        </header>
+
+        <div class="download-card">
+            <h2>Download for Windows</h2>
+            <p>Portable executable — no installation required. Just download and run.</p>
+            <a class="download-btn" href="https://github.com/Reygriff/Deepcoders/releases/latest/download/deepcoders_1.0.6.zip" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download (85 MB)
+            </a>
+            <div class="meta">Windows 10/11 · Portable · No install needed</div>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Multiple AI Models</h3>
+                <p>Choose from GPT-OSS, DeepSeek V3, Gemma 4, Llama 3.3, and more free models.</p>
+            </div>
+            <div class="feature">
+                <h3>Code in Any Folder</h3>
+                <p>Open a project folder and let the AI read, edit, and manage your files.</p>
+            </div>
+            <div class="feature">
+                <h3>Autopilot Mode</h3>
+                <p>Let the AI auto-approve safe operations while you review dangerous ones.</p>
+            </div>
+            <div class="feature">
+                <h3>Live File Sync</h3>
+                <p>File explorer updates automatically when the AI makes changes.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Deepcoders
+        </div>
+    </div>
+
+<script src="js/config.js"></script>
+<script src="js/session-guard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/download-gate.js"></script>
+<script src="js/auth.js?v=5"></script>
+</body>
+</html>

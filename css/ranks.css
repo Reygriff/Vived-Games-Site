@@ -1,0 +1,156 @@
+.pfp-with-rank {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    padding-top: 6px;
+}
+
+.rank-badge {
+    position: absolute;
+    top: -7px;
+    right: -8px;
+    z-index: 3;
+    display: flex;
+    pointer-events: none;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+}
+
+.rank-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.rank-icon--admin {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.rank-icon--player {
+    width: 38px;
+    height: 16px;
+}
+
+.rank-badge--nav .rank-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.rank-badge--nav .rank-icon--player {
+    width: 28px;
+    height: 12px;
+}
+
+.rank-badge--nav .rank-icon--admin {
+    width: 18px;
+    height: 18px;
+}
+
+.rank-badge--card .rank-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.rank-badge--card .rank-icon--player {
+    width: 42px;
+    height: 18px;
+}
+
+.rank-badge--card .rank-icon--admin {
+    width: 28px;
+    height: 28px;
+}
+
+.rank-badge--profile .rank-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.rank-badge--profile .rank-icon--player {
+    width: 52px;
+    height: 22px;
+}
+
+.rank-badge--profile .rank-icon--admin {
+    width: 36px;
+    height: 36px;
+}
+
+.rank-badge--account .rank-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.rank-badge--account .rank-icon--player {
+    width: 46px;
+    height: 20px;
+}
+
+.rank-badge--account .rank-icon--admin {
+    width: 32px;
+    height: 32px;
+}
+
+.rank-badge--tag {
+    position: static;
+    filter: none;
+    margin-right: 10px;
+}
+
+.rank-badge--tag .rank-icon {
+    width: 26px;
+    height: 26px;
+}
+
+.rank-badge--tag .rank-icon--player {
+    width: 48px;
+    height: 20px;
+}
+
+.rank-badge--tag .rank-icon--admin {
+    width: 34px;
+    height: 34px;
+}
+
+.nav-profile-btn {
+    overflow: visible;
+}
+
+.profile-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-rank-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.profile-rank-btn:hover {
+    text-decoration: none;
+    filter: brightness(1.08);
+}
+
+.account-pfp-wrap {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 12px;
+}
+
+.account-pfp-preview {
+    margin: 0;
+}

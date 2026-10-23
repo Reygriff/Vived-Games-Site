@@ -1,111 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Vived Games | Tags</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body {
-    margin: 0;
-    min-height: 100vh;
-    background: url("tagsimg.png") no-repeat center center fixed;
-    background-size: cover;
-    font-family: Arial, sans-serif;
-    color: white;
-}
-
-/* OVERLAY FOR READABILITY */
-.overlay {
-    background: rgba(0,0,0,0.65);
-    min-height: 100vh;
-    padding: 40px 20px;
-}
-
-/* TITLE */
-.page-title {
-    text-align: center;
-    font-size: 42px;
-    margin-bottom: 40px;
-}
-
-/* TAG LIST */
-.tags-list {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.tag-item {
-    background: rgba(0,0,0,0.6);
-    border-left: 5px solid #1aff4c;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
-.tag-name {
-    font-size: 22px;
-    margin-bottom: 6px;
-}
-
-.tag-desc {
-    font-size: 16px;
-    color: #ddd;
-}
-
-/* LEARN MORE */
-.learn-more {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.learn-more a {
-    color: #1aff4c;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.learn-more a:hover {
-    text-decoration: underline;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Vived Games | Tags</title>
+    <link rel="stylesheet" href="css/pages.css">
 </head>
+<body class="page-tags">
 
-<body>
+<nav class="top-menu" aria-label="Main navigation">
+    <a href="web.html">Home</a>
+    <a href="gameslist.html">Games</a>
+    <a href="products.html">Products</a>
+    <a href="devs.html">About Us</a>
+    <div class="top-menu-contact">
+        <a href="contact.html">Contact Us</a>
+        <div class="nav-auth-slot nav-auth-slot--top" data-nav-auth></div>
+    </div>
+</nav>
+
+<div class="hamburger-menu">
+    <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="menu-box">
+        <a href="web.html">Home</a>
+        <a href="gameslist.html">Games</a>
+        <a href="products.html">Products</a>
+        <a href="devs.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <hr>
+        <div class="nav-auth-slot nav-auth-slot--menu" data-nav-auth-mobile></div>
+        <a href="news.html">News</a>
+        <a href="profiles.html">Profiles</a>
+    </div>
+</div>
 
 <div class="overlay">
-
-    <div class="page-title">Vived Games | Tags</div>
+    <h1 class="page-title">Vived Games | Tags</h1>
 
     <div class="tags-list">
-
         <div class="tag-item">
-            <div class="tag-name">Verified</div>
-            <div class="tag-desc">Become a verified player</div>
+            <span data-rank-icon="verified"></span>
+            <div class="tag-copy">
+                <div class="tag-name">Verified</div>
+                <div class="tag-desc">Become a verified player</div>
+            </div>
         </div>
-
         <div class="tag-item">
-            <div class="tag-name">Player</div>
-            <div class="tag-desc">Become a player of Vived Games</div>
+            <span data-rank-icon="player"></span>
+            <div class="tag-copy">
+                <div class="tag-name">Player</div>
+                <div class="tag-desc">Become a player of Vived Games</div>
+            </div>
         </div>
-
         <div class="tag-item">
-            <div class="tag-name">Verified Studio Game Developer</div>
-            <div class="tag-desc">Become a dev for Vived Games</div>
+            <span data-rank-icon="studio_dev"></span>
+            <div class="tag-copy">
+                <div class="tag-name">Verified Studio Game Developer</div>
+                <div class="tag-desc">Become a dev for Vived Games</div>
+            </div>
         </div>
-
         <div class="tag-item">
-            <div class="tag-name">Admin</div>
-            <div class="tag-desc">Help in game developing</div>
+            <span data-rank-icon="admin"></span>
+            <div class="tag-copy">
+                <div class="tag-name">Admin</div>
+                <div class="tag-desc">Help in game developing</div>
+            </div>
         </div>
-
     </div>
 
     <div class="learn-more">
         <a href="tagslearn.html">Learn more</a>
     </div>
 
+    <div class="footer">&copy; 2026 Vived Games. All rights reserved.</div>
 </div>
 
+<script src="js/config.js"></script>
+<script src="js/session-guard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/download-gate.js"></script>
+<script src="js/ranks.js"></script>
+<script src="js/auth.js?v=10"></script>
 </body>
 </html>
